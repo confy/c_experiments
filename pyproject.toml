@@ -1,0 +1,19 @@
+[build-system]
+requires = [
+    "scikit-build-core>=0.10",
+    "pybind11>=2.13.6",
+]
+build-backend = "scikit_build_core.build"
+
+
+[project]
+name = "experiment"
+version = "0.1.0"
+description = "meming"
+requires-python = ">=3.10"
+
+[tool.scikit-build]
+cmake.version = ">=3.16"
+build.targets = ["experiment"]
+build-dir = "build"
+logging.level = "INFO"
