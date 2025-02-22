@@ -17,3 +17,10 @@ cmake.version = ">=3.16"
 build.targets = ["experiment"]
 build-dir = "build"
 logging.level = "INFO"
+
+[tool.cibuildwheel]
+archs = ["x86_64", "aarch64"]
+build = ["cp38-*", "cp310-*"]
+skip = "*-manylinux_i686 *-musllinux_i686" 
+manylinux-x86_64-image = "manylinux2014"
+manylinux-aarch64-image = "manylinux2014"
